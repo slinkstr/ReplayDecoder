@@ -1302,8 +1302,8 @@ namespace ReplayDecoder
                 }
                 else
                 {
-                    before_cut_raw_score = (int)(70 * cut.beforeCutRating);
-                    before_cut_raw_score = RoundHalfUp(before_cut_raw_score);
+                    float score = 70 * cut.beforeCutRating;
+                    before_cut_raw_score = RoundHalfUp(score);
                     before_cut_raw_score = Clamp(before_cut_raw_score, 0, 70);
                 }
             }
@@ -1322,8 +1322,8 @@ namespace ReplayDecoder
                 }
                 else
                 {
-                    after_cut_raw_score = (int)(30 * cut.afterCutRating);
-                    after_cut_raw_score = RoundHalfUp(after_cut_raw_score);
+                    float score = 30 * cut.afterCutRating;
+                    after_cut_raw_score = RoundHalfUp(score);
                     after_cut_raw_score = Clamp(after_cut_raw_score, 0, 30);
                 }
             }
